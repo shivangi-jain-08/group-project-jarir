@@ -8,8 +8,173 @@
 body{
     font-family: 'Tajawal', sans-serif;
     /* padding: 0px 160px; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width: 100vw;
+    height: 40px;
+    padding: 0px 160px;
+    background-color: #f9fafc;
+    color: #273444;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-bottom: 0.5px solid #E5E9F2;
+}
+
+.nav-img{
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+.nav-buttons{
+    padding: 0px 16px;
+    height: 40px;
+}
+
+.nav-spl{
+    border-left: 0.5px solid #E5E9F2;
+}
+
+header{
+    padding: 0px 160px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 72px;
+}
+
+.header-but{
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px 16px;
+}
+
+h3{
+    color: #3c4858;
+}
+
+#delivery{
+    border: none;
+    outline: none;
+    background-color: #e8ebee;
+    width: 262px;
+}
+
+#search-header{
+    width: 286px;
+    height: 40px;
+    box-sizing: border-box;
+}
+#browse{
+    width: 211px;
+    font-size: 18px;
+    color: #3C4858;
+    font-weight: bold;
+}
+#brand{
+    width: 119px;
+}
+#cart{
+    width: 40px;
+    padding: 0;
+}
+
+#jarir-logo{
+    width: 200px;
+    height: 40px;
+}
+
+#titanium{
+    margin: 30px 0px;
+}
+
+#main{
+    padding: 0px 160px;
+    box-sizing: border-box;
+}
+
+.small-10{
+    margin: 20px 0px;
+}
+
+.button-4{
+    margin: 35px 0px;
+}
+
+.but-4{
+    width: 286px;
+    height: 50px;
+    background-color: white;
+    color: #273444;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.but-4-img{
+    height: 24px;
+    margin-right: 20px;
+}
+
+.flex-spl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-4{
+    width: 282px;
+    margin: 12px;
+}
+
+.img-2{
+    width: 588px;
+    margin: 12px;
+}
+
+.img-3{
+    width: 383px;
+    margin: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer{
     margin-top: 20px;
@@ -24,9 +189,9 @@ footer{
     background-color: white;
     border: none;
     margin: auto;
-    position: absolute;
+    /* position: absolute;
     left: 675px;
-    top: 5px;
+    top: 5px; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 

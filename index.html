@@ -7,6 +7,229 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="flex">
+        <div id="nav-left" class="flex">
+            <div class="nav-buttons flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjMgMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgZmlsbD0ibm9uZSI+PGVsbGlwc2Ugc3Ryb2tlPSIjNDI1MjZFIiBzdHJva2Utd2lkdGg9IjEuNzEiIGZpbGw9IiM0MjUyNkUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgY3g9IjEwLjUiIGN5PSIxMCIgcng9IjEwLjA2MyIgcnk9IjEwIi8+PHBhdGggZD0iTTEzLjI0IDEzLjg1Yy0uNTA1LS4yMTYtMS4xMy0uNDk0LTEuMTMtLjcxdi0xLjM4OGEzLjE2NyAzLjE2NyAwIDAgMCAxLjE5LTIuNDY4VjcuNDMzYzAtMS42OTctMS4zMzktMy4wODUtMi45NzUtMy4wODUtMS42MzYgMC0yLjk3NSAxLjM4OC0yLjk3NSAzLjA4NXYxLjg1YzAgLjk1OC40NDYgMS45MTMgMS4xOSAyLjQ2OXYxLjM4OGMwIC4xODYtLjYyNS40NjMtMS4xMy43MS0xLjIyLjUyNC0zLjAzNSAxLjMyNy0zLjAzNSAzLjQ1NXYuMzA5aDExLjl2LS4zMDljMC0yLjEyOC0xLjgxNS0yLjkzLTMuMDM0LTMuNDU1eiIgZmlsbD0iI0ZGRiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xNS43NiAxNy4yNzh2Ljk3OGwtMi40OTUgMS4yMjMtMi4xLjQ2NC0zLjczMS0uNDY0LTEuODY4LS44NjktLjgtMS4zMzIgNi4zOTgtMS4zNjF6Ii8+PGVsbGlwc2Ugc3Ryb2tlPSIjNDI1MjZFIiBzdHJva2Utd2lkdGg9IjEuNzEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgY3g9IjEwLjUiIGN5PSIxMCIgcng9IjEwLjA2MyIgcnk9IjEwIi8+PC9nPjwvc3ZnPg==" alt="login" class="nav-img">
+                <p class="nav-text"><b>Login/Register Now</b></p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSItMC41IDAgMTkgMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTkgMTcuMDI4LS4yMy0uMTkxYy0uNDM4LS4zNjYtMS4wMy0uNzYyLTEuNzE2LTEuMjJDNC4zOCAxMy44MjYuNzIgMTEuMzc2LjcyIDcuMmMwLTIuNTggMi4xLTQuNjggNC42OC00LjY4IDEuNDAyIDAgMi43MTUuNjI0IDMuNiAxLjY5MmE0LjY2OSA0LjY2OSAwIDAgMSAzLjYtMS42OTJjMi41OCAwIDQuNjggMi4xIDQuNjggNC42OCAwIDQuMTc3LTMuNjYgNi42MjYtNi4zMzQgOC40MTYtLjY4Ni40NTktMS4yNzguODU1LTEuNzE1IDEuMjIxTDkgMTcuMDI4eiIvPjwvc3ZnPg==" alt="Wishlist" class="nav-img">
+                <p class="nav-text">Wishlist</p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMTEgNTAgMzkiPjxwYXRoIGQ9Ik0xMSAxMUM0Ljg5OCAxMSAwIDE1Ljg5OCAwIDIyYzAgMi4zLjcgNC41IDIgNi4zVjQyYzAgMS42MDIgMS4zOTggMyAzIDNoMi4wOTRjLjQ4IDIuODI4IDIuOTQ5IDUgNS45MDYgNXM1LjQyNi0yLjE3MiA1LjkwNi01aDkuMTkyYzEuNjAxIDAgMi44MDQtMS4zIDIuODA0LTIuOFYxNy45MDFDMzEgMTYuMzAxIDI5LjcgMTUgMjguMiAxNWgtOC43Yy0yLTIuMzk4LTUuMTAyLTQtOC41LTR6bTAgMmM1IDAgOSA0IDkgOXMtNCA5LTkgOS05LTQtOS05IDQtOSA5LTl6bS0uMDE2Ljk4NGMtLjU1LjAxMi0uOTkyLjQ2NS0uOTg0IDEuMDE2djUuNzVBMS42MiAxLjYyIDAgMCAwIDkuMzk4IDIyYy4wMDQuMDU5LjAwOC4xMTcuMDE2LjE3MmwtMi4xMjEgMi4xMjFhLjk5Mi45OTIgMCAwIDAtLjI3My45NzMuOTkuOTkgMCAwIDAgLjcxNC43MTQuOTkyLjk5MiAwIDAgMCAuOTczLS4yNzNsMi4xMTctMi4xMTdBMS41OTcgMS41OTcgMCAwIDAgMTIuNTk3IDIyYzAtLjQ4NC0uMjE4LS45NDUtLjU5Ny0xLjI1VjE1YTEuMDAzIDEuMDAzIDAgMCAwLTEuMDE2LTEuMDE2ek0zNCAyMGMtMS4xMDIgMC0yIC44OTgtMiAydjIxYzAgLjg0LjUyNyAxLjU2MyAxLjI2NiAxLjg1NUMzMy42ODggNDcuNzU0IDM2LjE5IDUwIDM5LjE5OSA1MGMyLjk1NyAwIDUuNDMtMi4xNzIgNS45MS01SDQ3YzEuNyAwIDMtMS4zIDMtM3YtOS41OThjMC0yLTEuMzk4LTQuMTAxLTEuNTk4LTQuMzA0TDQ2LjA5OCAyNWwtMS44OTktMi41QzQzLjIgMjEuMzk4IDQxLjcgMjAgNDAgMjB6bTQgNWg1LjU5OGwzLjIwMyA0LjJjLjMuNSAxLjE5OSAyIDEuMTk5IDMuMXYuN0gzOGMtMSAwLTItMS0yLTJ2LTRjMC0xLjEwMiAxLTIgMi0yek0xMyA0MGMyLjIgMCA0IDEuOCA0IDRzLTEuOCA0LTQgNC00LTEuOC00LTQgMS44LTQgNC00em0yNi4yIDBjMi4xOTggMCA0IDEuOCA0IDRzLTEuODAyIDQtNCA0Yy0yLjIgMC00LTEuOC00LTRzMS44LTQgNC00eiIvPjwvc3ZnPg==" alt="Track Order" class="nav-img">
+                <p class="nav-text">Track Order</p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMgNmEzIDMgMCAxIDAgMC02IDMgMyAwIDAgMCAwIDZabTkgMGEzIDMgMCAxIDAgMC02IDMgMyAwIDAgMCAwIDZabTAgOWEzIDMgMCAxIDAgMC02IDMgMyAwIDAgMCAwIDZabS05IDBhMyAzIDAgMSAwIDAtNiAzIDMgMCAwIDAgMCA2WiIvPjwvc3ZnPg==" alt="Services" class="nav-img">
+                <p class="nav-text">
+                    Jarir Services
+                </p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI1IDJDMTIuMjk3IDIgMiAxMi4yOTcgMiAyNXMxMC4yOTcgMjMgMjMgMjMgMjMtMTAuMjk3IDIzLTIzUzM3LjcwMyAyIDI1IDJ6bTAgOWEzIDMgMCAxIDEgMCA2IDMgMyAwIDAgMSAwLTZ6bTQgMjdoLTh2LTJoMlYyM2gtMnYtMmg2djE1aDJ2MnoiLz48L3N2Zz4=" alt="Help" class="nav-img">
+                <p class="nav-text">
+                    Help
+                </p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuNzk1LjM5YzMuNjIgMCA3LjM5OCAyLjkwMyA3LjQwNSA3LjA0OC4wMDggNC45NzgtNy40MDUgMTIuNDM5LTcuNDA1IDEyLjQzOVMuMzgyIDEyLjQwNi4zOSA3LjQzOEMuMzk2IDMuMjg4IDQuMTc1LjM5IDcuNzk1LjM5eiIvPjxwYXRoIGQ9Ik04LjUzIDguMDc3djMuOTg5bC0uMDIuMDAzYy0uMjc0LjA1LTMuMzI2LjUyMi00LjkzOS0yLjQzMmgxLjU1NXMuNjgzIDEuMDIzIDIuMDUgMS4xMjdWOC4wNzdIOC41M3ptNC4wNzQtLjA0N2E0Ljc2MiA0Ljc2MiAwIDAgMS0zLjY0NSAzLjk4NXYtMS4zMjhjMi4wNjItLjY2NiAyLjI3Ni0yLjY1NyAyLjI3Ni0yLjY1N3pNMy45NDggNC45MDZjMS4yODEtMi4wOTUgNC4xNTUtMS45NDQgNC4xNTUtMS45NDRhNC41NzMgNC41NzMgMCAwIDEgNC4zNyAzLjYwNUg0LjU2MWMtLjYxNCAxLjE1NC4yNyAyLjcxNC4yNyAyLjcxNEgzLjM1N2MtLjg4NC0yLjMuMjY3LTQuMDQyLjI2Ny00LjA0Mmg2LjY0NEM4LjA0NCAzLjE0NCA1Ljc0IDQuOTA2IDUuNzQgNC45MDZ6bTMuODk4IDEuNzY1Yy4zNzcgMCAuNjg0LjI5Mi42ODQuNjU0IDAgLjM2LS4zMDcuNjQ4LS42ODQuNjQ4LS4zNzYgMC0uNjg2LS4yODgtLjY4Ni0uNjQ4IDAtLjM2Mi4zMS0uNjU0LjY4Ni0uNjU0eiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==" alt="Location" class="nav-img">
+                <p class="nav-text">
+                    Our Location
+                </p>
+            </div>
+        </div>
+
+        <div id="nav-right" class="flex">
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzggMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTM1IDBhMyAzIDAgMCAxIDMgM3YyMWEzIDMgMCAwIDEtMyAzSDNhMyAzIDAgMCAxLTMtM1YzYTMgMyAwIDAgMSAzLTNoMzJaTTI0LjcxOSAxOC43NzhoLS4wMDRsLS4wMDEuMDAyLS4wODcuMDNjLS4yOS4xMjUtLjI2LjQ1NC0uMDM3LjYwNC0zLjgwNiAwLTkuNTQ1LS4wNTgtMTEuMjQtLjA2NGgtLjIzMmMtLjczOCAwLTMuMDcxLS4wODUtMy4xMTYtLjA4NS41LjcgMS4yMjUuODQyIDIuMTc0Ljg1NmguNzYyYzIuNjg3LS4wMDQgOS41MDktLjAyMSAxMS42MDgtLjAyMWEuNTk5LjU5OSAwIDAgMC0uMDU4LjM5bC0uMjUxLS4wMDZjLS4wOTEuMDQtLjEuMjAxLS4wMjQuMjkuMTMuMDA1LjI1NS4wMTcuMzc4LjAyNWEuMzUuMzUgMCAwIDAgLjEuMTIybC4wMS4wMDZjLjAwNi4wMDIuMDEyLjAwNS4wMjMuMDA2bC4wNy4wMDZjLjEwNy0uMDA2LjE2Mi0uMDkyLjIwNi0uMTU3LjI1Mi4wMiAxLjY3LjA0IDEuODAyLS4wMDRsLjA0NC4wNmMuMDc1LjA5OC4xNTkuMTc2LjI5OC4xNi4yOTItLjA2LjUyMy0uMDkuNTMtLjY1NyAwIDAtLjAzLS45NjYtLjY5NC0uOTA2LS4xNTcuMDIzLS41OTguMDY1LS41OTguMDY1LS41MS0uMDU4LS44ODQtLjA2NC0xLjQ1OC0uMDg0LjA1My0uMDY0LjE0Ni0uMzI0LjAzMi0uNDE4LS4wMy0uMDI0LS4wNzQtLjAzNy0uMTQyLS4wMzJsLS4wMDMtLjAwMi0uMDAzLS4wMDEtLjAwMy0uMDAxLS4wMS0uMDEtLjAwMi0uMDAxYy0uMDMxLS4wNDMtLjA0Ny0uMTQyLS4wNy0uMTdsLS4wMDQtLjAwM1ptNS40NDYtMTIuNTczYy0uMDI3LjAwMy0uMDYuMDQ0LS4xMS4xNDQtLjEyLjE4Ny0uMTYuNTIzLS4xMTIuODIuMjg5IDEuODY0LjUwMyAzLjY3LjU0OCA1LjMyMy0uMDI1LjE1Ni0uMDMyLjI0LS4xMS40MzctLjE3LjIwOS0uMzU3LjQ3LS41MzQuNTk2LS4xNzcuMTI2LS41NTQuMjQ2LS42NzcuMzQtLjM5MS4yMTYtLjM5My40NjMtLjA3Ny40NzIuNTQ0LS4wNiAxLjE4OS0uMTAzIDEuNjMzLS43NDMuMTE5LS4xNzkuMjU5LS42NjUuMjY1LS45NjMuMDQyLTEuNzQ0LS4wMjMtMy40NDktLjI5Ny00LjcwOS0uMDE4LS4xMjItLjA3NC0uNDA1LS4wNTMtLjQ0Mi4wMzUtLjA4Ni4yMTMuMDA5LjI3Ny0uMDkuMDkzLS4wOTEtLjQ2MS0uNzY4LS42NTUtMS4wNTgtLjA0LS4wNy0uMDYzLS4xMzEtLjA5OC0uMTI3Wm0tNi43MTguMDcyYy0uMDI3LjAwMy0uMDYuMDQyLS4xMS4xNDMtLjEyLjE4Ny0uMi41MTQtLjE5MS44Mi4yNiAxLjcxNy4zMzkgMy4yMTkuNTA5IDQuOTM2LjAxNC4xNjYtLjAxMi40MDctLjEyNy41MDQtLjQyOC40MjYtMS4wNDQuOTUyLTEuNzE1IDEuMTk0LS4wNzIuMDc4LjE4LjQwOC41MDUuNDA4LjU0NC0uMDYgMS4wMjMtLjM1MiAxLjQ2Ny0xLjEyMS4xMTktLjE3OS4zMjctLjU2My4zMzMtLjg2LjA0Mi0xLjc0NS0uMDkyLTMuMS0uMzY2LTQuMzYtLjAxOC0uMTIzLS4wMDYtLjI2OS4wMTYtLjMwNi4wMzUtLjA0LjE1NS4wMDEuMjE4LS4wOTguMDkzLS4wOTEtLjI1LS44NDQtLjQ0Mi0xLjEzMi0uMDM4LS4wNzItLjA2Mi0uMTMtLjA5Ny0uMTI4Wm01LjIyOS0uMDI0Yy0uMDczLS4xMjctLjIwNi0uMDgzLS4zNy4xMjQtLjE1Mi4xMzYtLjA5Ni40NDUtLjAzOC43NC4xNS43NTIuMjg1IDEuNTE3LjM5MiAyLjI4MS0uMTk3LS4yOC0uNDM4LS42MTgtLjY3NS0uOTQ1bC0uMDMtLjE0OWMwLS4wMTMtLjAzMy0uNjE0LS4wNjEtLjc1OC0uMDA1LS4wNTgtLjAyLS4wNzQuMDQ0LS4wNjguMDY4LjA1NS4wNzcuMDU4LjExOS4wNzYuMDY4LjAxMS4xMjgtLjA5OS4wODctLjIwMWwtLjYzNC0xLjExOWMtLjAyMy0uMDIyLS4wNTItLjA0Ny0uMDg1LS4wNTEtLjAzMy0uMDA1LS4wNy4wMS0uMTEuMDY4YS40MzQuNDM0IDAgMCAwLS4xNTcuMzMxYy4wMTkuMjY1LjA2OC41MzYuMDg3LjhsLjAyLjEwN2ExLjA0OCAxLjA0OCAwIDAgMC0uMDcxLS4wOGMtLjU0MS0uNTQyLjI0OC0uMDg4LS4xMDMtLjUwNy0uMjk3LS4zMTItLjM4NC0uNDExLS42MzgtLjU5OC0uMTI4LS4wNzgtLjIwNS0uMjMtLjI0Ni4wMjdhNC43NDIgNC43NDIgMCAwIDAtLjAxOC42NzVjLS4wMDEuMTA1LjExMy4zMDQuMjEyLjQyLjM2LjQyMy43MjkuODc0IDEuMDk5IDEuMzQzLjA3OC45NTguMDk5IDEuODM2LjE3OCAyLjc5NS0uMDExLjQxLS4xNDMuOTU1LS4yNyAxLjAwNyAwIDAtLjE5LjEwNS0uMzE4LS4wMTItLjA5My0uMDM1LS40NjUtLjU5MS0uNDY1LS41OTEtLjE5LS4xNjctLjMxNy0uMTE5LS40NTMgMC0uMzczLjM0NC0uNTQyLjk5LS43OTYgMS40MzMtLjA2NS4xLS4yNS4xODMtLjQ1NS0uMDA4bC0uMDcyLS4xMDRjLS4zMy0uNTI3LS4yMzEtMS4xNzQtLjIwNS0xLjMwOGwuMDAxLS4wMDctLjAwNS4wMjItLjA4NC4xMDRjLS4zNTIuNTAzLS4xNjcgMS4yMzMtLjA3IDEuNC4xNTMuMjkxLjI3Ni40NzguNTc0LjYyMy4yNy4xOS40ODIuMDcyLjU5OC0uMDYyLjI3My0uMjcuMjc2LS45Ni40MDQtMS4wOTYuMDktLjI1LjMxNS0uMjA4LjQyNC0uMDk3LjEwNi4xNDcuMjMyLjI0MS4zODguMzIuMjU0LjIxNS41NTguMjU0Ljg1Ny4wNTkuMjA0LS4xMS4zMzctLjI1Mi40NTctLjUzMy4xMjgtLjMyOC4wNjUtMi4wNDYuMDM2LTMuMDAxLjE5Mi4yNTguMzgyLjUyMi41Ny43ODkuMDgzLjgzOC4xMiAxLjY2NS4wOTMgMi40NTctLjAyLjE1OC41NzYtLjQ3LjU3Mi0uNzY4LS4wMDMtLjI2IDAtLjQ5NiAwLS43MTYuMjg5LjQ0LjU2OC44ODcuODMyIDEuMzQuMTY0LS4wODIuMTA4LS45NjcuMDA0LTEuMDktLjI3Ny0uNDQyLS42MzEtLjkyMS0uOTA1LTEuMjkyYTIyLjYxNSAyMi42MTUgMCAwIDAtLjE2Mi0xLjE4OWMtLjA1Mi0uMjY0LS4xMDUtLjY2LS4xODQtLjk3Mi0uMDIyLS4xMjItLjA4Ny0uNTEzLS4wNjctLjU1LjAzMi0uMDg3LjE1NC4wMDMuMjE0LS4wOTguMDktLjA5NC0uMzEyLTEuMDg3LS41MTUtMS4zN1ptLTE2LjkzLjA4aC0uMDIyYy0uMDQuMDA2LS4wODEuMDI3LS4xMzEuMDM3LS4xNjUuMDUtLjMyLjE4Ny0uMjcxLjQ1MS4xOTUgMS4xMzMuMzIyIDEuOTk2LjUxNyAzLjEyOC4wMy4xMzMtLjA4Ni4zMDctLjIzNi4yOS0uMjU1LS4xNjUtLjMxOC0uNDk4LS43NTQtLjQ4NC0uMzE1LjAwNC0uNjc0LjMzLS43Mi42NDYtLjA1Mi4yNS0uMDcuNTIyIDAgLjc0MS4yMjIuMjU1LjQ4OC4yMjguNzIuMTcuMTktLjA3NS4zNDktLjI1NS40MTgtLjIxMnYuMDAybC4wMDYuMDE4Yy4wMjcuMTItLjA2My42NjctLjkwNyAxLjA5NS0uNTUxLjIzNi0uOTkuMjkzLTEuMjI2LS4xMzctLjE0Ni0uMjY4LjAxLTEuMjkxLS4zNS0xLjA1NS0xLjA2NSAyLjYyMiAyLjQ5NiAyLjk4OCAyLjg5My4xMDguMDI2LS4wODEuMTA0LS4xNjMuMTYtLjE0My4wMjQuMDEuMDQ3LjA0Mi4wNTUuMS0uMDgzIDIuNjA4LTIuNzU1IDIuNzg3LTMuMjEgMS45NjctLjExMS0uMTkzLS4xNDUtLjYyNC0uMTU3LS44ODItLjAyMS0uMTU2LS4wNjItLjI0Ni0uMTEtLjI4Mi0uMTA3LS4wNzctLjI1My4xMjUtLjI4NC40NzYtLjA0NS4yODMtLjAzMi4zNi0uMDMyLjYzMy4xNDMgMi4wNiAzLjU4IDEuMTc0IDQuMTQtLjUyNy4yNzctLjg4LS4wMDYtMS41NDMuMDktMS42MjZsLjAwOS0uMDA0LjAwNS0uMDAxYy4zNDguMzUuODI3LjA0NC45MzItLjA3OC4wNDUtLjA2MS4xNTgtLjEuMjM2LS4wMjEuMjY2LjE4Mi43MzMuMDk2LjgzLS4yMjZhNi44NCA2Ljg0IDAgMCAwIC4xMTUtLjk3NmMtLjE3My4wNTEtLjMxMy4wOS0uMzcuMTQ2YS4wOTguMDk4IDAgMCAwLS4wMjYuMDQ2bC0uMDQ0LjI4YS4wNzcuMDc3IDAgMCAxLS4wMDguMDIxLjA5LjA5IDAgMCAxLS4wMzIuMDI5Yy0uMDYxLjAzMS0uMTY4LjAxMy0uMTc0LS4wNzItLjA4My0uMzU4LS40MjItLjQwNC0uNjI4LjE1LS4xNC4xMDctLjM5Mi4xMjgtLjQxOC0uMDMyLjAzNC0uMzczLS4xMjMtLjQyMy0uNDM4LS4yNDctLjEwMS0uNzM4LS4yMDItMS40NDItLjMwMy0yLjE4LjEzLS4wMDQuMjUyLjA4Ny4zNzItLjA1Ni0uMTMtLjM4Ni0uNDA1LTEuMTctLjU2NC0xLjI0NmwtLjAxMS0uMDEyLS4wMTEtLjAxLS4wMS0uMDA3LS4wMDUtLjAwMy0uMDA1LS4wMDMtLjAyLS4wMDctLjAyMS0uMDA0Wm00LjM5MiAyLjc1Ni0uMDEuMDA1LS4wMDYuMDA0LS4wMjEuMDE4Yy0uMDIzLjAyMi0uMDUzLjA1NS0uMTA0LjA5LS4xMTYuMTI1LS4xMzYuMjEzLS4xMy40NjUuMDA4LjAyNy4yMi41OTIuNC45OS4xMjMuNDEzLjIzNS44ODYuMTUzIDEuMzMyLS4yODUuNTkxLS44NTggMS4xMjEtMS40MSAxLjQwOS0uMjgyLjA4Ni0uNTI1LjA1Ni0uNTktLjAwMmwtLjAwMi0uMDAyYS4zNDUuMzQ1IDAgMCAxLS4xNTYtLjMyMmwuMDAyLS4wMDIuMTA4LS4wN2MuNDQtLjI4Mi45MjMtLjU1NiAxLjMwOC0xLjMyOS4xMjMtLjMyLjE2LS41MTMuMDM4LTEuMDA3LS4wNDgtLjE4NC0uMTA3LS4zMzYtLjIzNi0uNDY4bC4wNC0uMDA2Yy4wOTQuMDA2LjI1LjEwMS4yNzcuMDIzLS4wNS0uMjM2LS4yMTYtLjU1NC0uNDA2LS43MTYtLjE2Ni0uMTQ1LS4zNDctLjE2MS0uNS0uMDMtLjE3LjA5Mi0uMjA3LjQxOS0uMTI0LjcwNS4wOTIuMjE1LjMzOS4yNTMuNTE1LjY4OGwuMDA0LjAyN2MuMDEzLjA4MS4wNDMuMzE0LS4wMzIuNDE3LS4wNzIuMjE0LS45OTcuOTExLTEuMDcuOTU3bC0uMDA1LjAwNmgtLjAwNGwtLjAwMi0uMDAydi0uMDAybC0uMDAxLS4wMDJjLS4wMDQtLjAyIDAtLjA2NC0uMDAxLS4xMzUtLjAwNi0uMTMuMDUtLjQyNS4wNDYtLjQ3OGwtLjAwMi0uMDAydi0uMDAyaC0uMDAybC0uMDk1LjA3NmMtLjIzMy4yMzYtLjMxOC43MS0uMzY4Ljg2Mi0uNzc0LjUxLTEuNjUzLjg5MS0yLjE2IDEuNDA5LS4yNjQuMzkzIDEuODE3LS40NTIgMi4wNTktLjU1NGwuMDA2LjAwNmMuMDQ2LjA0OS4wNS4yMTcuMTg4LjM2OC4yMTYuMjguNjc2LjQ1MiAxLjEyMy4zNDUuNzUtLjI1OSAxLjE4Mi0uNzQ3IDEuNjIyLTEuMjg5LjA2My0uMDg3LjE2LS4xNTYuMjUzLS4wODkuMzAyLjY0NyAxLjE3NCAxLjEwNyAyLjMgMS4xNTQuMjYyLS4zMDMuMTM3LS40NTEuMDMtLjUxNS0uMDMyLS4wMjEtLjU2LS4yMTctLjY0Mi0uNDEzLS4wNTItLjE4Mi4wNzQtLjM0My4zMjUtLjQ2NS43MjQtLjA4MyAxLjQzNS0uMTc2IDIuMTI0LS4zODguMDA3LS4yMi4xNDMtLjU1LjIzNC0uNjk0LjA2My0uMS4xMDQtLjExLjEyNS0uMTN2LS4wMTJsLS4wMDItLjAxLS4xMTctLjA2Ni0yLjMxLS4wMS0uMDM3LS4wMTUtLjAyNS0uMDE1LS4wMS0uMDEtLjAwMi0uMDA0di0uMDAybC0uMDAyLS4wMDJ2LS4wMTVsLjAwMi0uMDAyLjAwMi0uMDA0LjAxNi0uMDE0YS4yOTYuMjk2IDAgMCAxIC4wNTctLjAyNmMuNTUtLjA3MSAxLjUzLS4yMjQgMS41OTYtMS4xMjQtLjAxLS40NjktLjIxLS43NzYtLjgxMi0uODYtLjQ0Mi4wMzItLjc1OC40NC0uNzA3Ljg5LS4wMjEuMTIyLjA0My4zNTktLjA4Ny4zODctLjg1LjA3My0xLjc3NS41ODItMS44MDguOTQ1bC0uMDAyLjAwMmgtLjAwM2wtLjAwNC4wMDItLjAwNC4wMDEtLjAwMy4wMDFoLS4wMTZjLS4wNi0uMDE2LS4xMy0uMTAzLS4xMi0uMjI2YTQuMTkgNC4xOSAwIDAgMC0uNTgxLTEuODg2Yy0uMTItLjExNC0uMTcyLS4xNi0uMjA2LS4xNjdoLS4wMTZabTEyLjQ0NSAzLjY5aC0uMDQ4Yy0uMDQ4IDAtLjA5OC4wMDctLjE3LjAxMy0uMDc4LjAxNi0uMTA2LjA0OS0uMTIuMTQuMDA2LjEzNy4wOTQuMTMuMTg0LjE4NS4wNTIuMDYzLjA4Ni4xMjEtLjAwNC4yMjYtLjA4Ni4wNzQtLjE0Ni4xMTUtLjIzMi4xOS0uMDQuMDY3LS4wNjYuMTY3LjA1OC4yLjIyOC4wNi43NTYtLjI2Ni43NTYtLjI3NC4wODYtLjA2MS4wNTctLjE3OC4wNS0uMTc4LS4wNS0uMDU0LS4xNjItLjAyMi0uMjM4LS4wMy0uMDM2IDAtLjE1NC0uMDE2LS4wOTgtLjExN2EuNjcyLjY3MiAwIDAgMCAuMDk2LS4xNzZjLjAzNi0uMDc0LjAwNC0uMTI1LS4xMjQtLjE2NmEuNzYyLjc2MiAwIDAgMC0uMTU4LS4wMTRabS0yMS4wNi0xLjA0NGMtLjAxNi4wMDEtLjA0OC4wNDYtLjA5LjA5OC0uMzc2LjU3Mi0uNDEgMS40MjUtLjIwMiAxLjY4LjExLjEyMS4yOTIuMTc0LjQyNi4xMzYuMjM2LS4wOTcuMzQtLjU1NC4yODQtLjcyMS0uMDgtLjExOC0uMTQxLS4xMzctLjIyLS4wMzctLjE2Ni4zMjItLjIzNS4xMDItLjI1LS4wNzhhMy45NzcgMy45NzcgMCAwIDEgLjA0OC0uOTA2Yy4wMi0uMTI4LjAyLS4xNzIuMDA0LS4xNzJabTEyLjgxLjc1YS4xODYuMTg2IDAgMCAwLS4wODguMDE4Yy0uMDA2IDAtLjI3LjE3LS4zNTQuMjg5LS4wNTIuMDM3LS4wNDYuMDctLjAzLjEzNi4wNC4wODguMTEuMDYuMTkyLjAxOS4xMDctLjAxNS4xNTkuMDUyLjE1LjE3Ni0uMDUuMTUzLjAyMi4yMS4wMjIuMjIgMCAuMDEuMTAzLjA5My4yMjQuMDI2LjI1NS0uMDkyLjQxNC0uMTgzLjc3Mi0uMjU4LjA5NC0uMDAyLjA4OC0uMjQyLS4wNi0uMjUtLjE5NC4wMS0uMzcyLjAxOS0uNTY2LjE2NC0uMTIuMDI3LS4xNC0uMDQzLS4xNjYtLjEwNS0uMDMtLjE1NC4wNjgtLjI2My4wNDgtLjM3OC4wMDYuMDA1LS4wNi0uMDUxLS4xNDQtLjA1NlptLS41MzctNi4zNzhjLS4wNjguMDA2LS4xMjEuMDQ0LS4xNDEuMTM5LS4wMjcuMjI0LS4wMTMuMzQ2LjAyNi41MzIuMDMuMTI1LjIyLjMzMy4zMTMuNDU0LjQ0Ni41NzEuODc1IDEuMTQ3IDEuMjg5IDEuNzQyLjA2NS40NDIuMTEzLjg3NC4xNDMgMS4zMDQuMDY3Ljk0NC4wODggMi4xMTguMDI2IDMuMTExLjE4NS4wMDcuNDgyLS4yODUuNTg2LS43MTMuMDY4LS41OTMtLjAyNC0xLjgwMS0uMDMtMi4xNTEtLjAwNC0uMTQ2LS4wMTQtLjMxOS0uMDI0LS41LjQ4Mi43NTEuOTQ5IDEuNTQ4IDEuNDA4IDIuNDIzLjE2Ny0uMDc2LjEzLS45NzYuMDMyLTEuMTAyLS4zNjctLjc1NC0uODc1LTEuNS0xLjAzNi0xLjc4NmExMy41NjUgMTMuNTY1IDAgMCAwLS40OTMtLjcyNmMtLjA0My0uNDc1LS4wOTEtLjg3OC0uMTIxLS45OTktLjA3Ni0uNTAyLjIxNi4wNTYuMTc2LS4yMzUtLjA5NS0uNTAyLS4zODUtLjg0My0uNzI3LTEuMzAzLS4xMS0uMTQ5LS4xMDgtLjE4LS4yOC4wMzdhLjkxNy45MTcgMCAwIDAtLjA3LjU3NiAzLjA1NyAzLjA1NyAwIDAgMC0uMTgtLjIyN2MtLjI5Ni0uMjQyLS4zMTQtLjI1Ni0uNTYtLjQ1My0uMDc3LS4wNTItLjIyNS0uMTMyLS4zMzctLjEyM1ptNC42NTkuMTI2Yy0uMDIyLjAwNC0uMDU2LjAzNy0uMTE3LjExNC0uMTUyLjQ3NS0uMjA2Ljg2My0uMTQ3IDEuMTU4LjM5IDEuOTQ3Ljc5IDMuNzIuNzI3IDUuNTc0LjE4NSAwIC4zOTktLjQwNS40OS0uODA2LjA1LS41NTQtLjAzMi0uODktLjA0Ny0xLjIxNi0uMDE1LS4zMjUtLjM4Ni0yLjk2NC0uNDYxLTMuMjEtLjA5MS0uNDY1LjM2LS4wNi4zMS0uMzMxLS4xNTUtLjM0Mi0uNTQ0LS44MzgtLjY2Ni0xLjEzNC0uMDQ1LS4wODItLjA1MS0uMTU0LS4wOS0uMTQ5Wm0yLjYxNCA0LjM5aC0uMDRjLS4xMTQuMDE0LS4yMjEuMTE2LS4xNzIuMjgtLjAzMS4wOTcuMTU0LjQzMy4yMDIuNjEyLjA0My4xMjctLjA1Ni40ODcuMDM0LjUyNS4wODMuMDQyLjMtLjIxMy4yOTMtLjUzNC4wMjQtLjE2Ni0uMDYyLS43NzMtLjI4LS44NzZsLS4wMzctLjAwOFpNOC45OTkgNi4zM2EuMjM4LjIzOCAwIDAgMC0uMTguMTQ0Yy0uMDEzLjI3Ni0uMDE0LjU1MS4wMTguODA0LjEzLjQ0Ni4xNzMuODM3LjIzNiAxLjI5My4wMTguNjExLS4zNy4yNjQtLjM1Mi0uMDM4LjA4OS0uMzkzLjA2NS0xLjAxMy0uMDE0LTEuMTctLjA2My0uMTU2LS4xMzYtLjE5NS0uMjktLjE3LS4xMjEtLjAwNi0uNDM1LjMyLS41MjIuODYgMCAwLS4wNzMuMjc4LS4xMDUuNTI2LS4wNDMuMjgtLjIzNy40NzctLjM3Mi0uMDM4LS4xMTctLjM3NS0uMTg4LTEuMjk5LS4zODQtMS4wODMtLjA1Ni43MjEtLjEyMiAxLjk5LjUxOSAyLjEyLjc3Ni4wNzIuMzQ3LTEuMjUzLjYyOC0xLjQ5My4wNTMtLjExOS4xNTItLjEyMS4xNi4wMjh2MS4xMjVsLjAwNy4xMTJjLjA0MS4yNzcuMjYuMzcuNDMzLjQzNy4yMDQtLjAxNS4zMzgtLjAxLjQxOC4xOGwuMDk3IDEuOTQ3cy40Ny4xMy40OTMtMS4wOTRjLjAyMy0uNzE4LS4xNS0xLjMyLS4wNDgtMS40Ni4wMDQtLjEzOC4xODgtLjE0NC4zMTUtLjA3Ny4yMDMuMTM2LjI5My4zMDUuNjA4LjIzNy40OC0uMTI2Ljc2OS0uMzUuNzc2LS43LS4wMjgtLjMzNS0uMDctLjY3LS4yMi0xLjAwMy4wMi0uMDYxLS4wOTItLjIyLS4wNzEtLjI4LjA4Ni4xMjkuMjE3LjExOC4yNDYgMC0uMDgyLS4yNTgtLjIxLS41MDMtLjQxNC0uNjEtLjE3LS4xNDMtLjQxOC0uMTEzLS41MS4xODUtLjA0MS4zNDMuMTMuNzUuMzkzIDEuMDgyLjA1Ni4xMy4xMzMuMzQ3LjA5OS41NC0uMTQuMDc2LS4yNzcuMDQ1LS4zOTQtLjA3MyAwIDAtLjM4Mi0uMjcyLS4zODItLjMzNC4xLS42Mi4wMjItLjY5LS4wMzQtLjg2Mi0uMDQtLjIzNy0uMTU3LS4zMTMtLjI1My0uNDc0LS4wOTYtLjA5Ny0uMjI1LS4wOTctLjI4NyAwLS4xNy4yNzktLjA5Ljg4LjAzMiAxLjE0Ny4wODguMjQ3LjIyMy40MDIuMTYuNDAyLS4wNTIuMTQtLjE2Mi4xMDctLjI0LS4wNTQtLjExMi0uMzMzLS4xMzUtLjgzLS4xMzUtMS4wNTQtLjAzNC0uMjc3LS4wNzEtLjg3LS4yNjMtMS4wMi0uMDUtLjA2NS0uMTEtLjA4OS0uMTY4LS4wODJabTQuNDE4IDQuNDU4Yy0uMS4wMDYtLjE4OC4wNTctLjE0OC4xOS0uMDA2LjA5Ny4yOC4yMTYuMjk4LjQ0LjA0LjA5My0uMDYxLjM4OS4wMjQuNDE2LjA3OC4wMy4xODctLjIwNS4yMjgtLjQyNC4wMjMtLjEyLS4wOTgtLjU0LS4zMDQtLjYxNWEuNDE1LjQxNSAwIDAgMC0uMDk4LS4wMDdabS00LjY5Ni0uNjgyYy0uNjQuMDExLTEuNTc0LjgtMS41OTggMS4yMzYuNjc0LS4zMDkgMS4zMzYtLjYwNiAyLjAyLS45MjUtLjExLS4xNTgtLjAwNi0uMy0uNDIyLS4zMTFabTE4LjUzNy0uMzM2LS4wMTEuMDAyLS4wNi4wNGMtLjI0Ny4xNjktMS4xNzYuOC0xLjIwMy44MjYtLjEyMi4xMDQtLjA2MS40NjkgMCAuNDI3LjA4OC4wMzIgMS4zMjktLjc3IDEuMzA1LS44NjQuMDU0LjAwMi4wOC0uNDE0LS4wMi0uNDNsLS4wMS0uMDAxWm0tOC44NzQtLjM1aC0uMDM2YS4xNDMuMTQzIDAgMCAwLS4xMTEuMTA4Yy0uMDExLjA0MS4wMi4xMS0uMDE4LjEzLS4wMjIuMDItLjExLjAwOC0uMTA1LS4xMDUgMC0uMDM2LS4wMjgtLjA3NS0uMDQ0LS4wOTgtLjAxNy0uMDEtLjAyNi0uMDE0LS4wNTctLjAxNC0uMDM3LjAwMS0uMDM4LjAxLS4wNi4wNC0uMDA4LjAzMS0uMDIuMDYtLjAyLjA5NS0uMDA0LjA0LS4wMTguMDU0LS4wNS4wNi0uMDM1IDAtLjAyNi4wMDQtLjA1NS0uMDEzLS4wMTctLjAxNy0uMDM4LS4wMjQtLjAzOC0uMDU0YS4zLjMgMCAwIDAtLjAxNi0uMWMtLjAxNS0uMDE4LS4wNC0uMDI2LS4wNjctLjAzMi0uMTQ1IDAtLjE1NC4xNTctLjE0NS4yMTgtLjAxMS4wMTEtLjAxOC4yOTUuMTguMzczLjI2Ni4xMjIuOS4wNS43NDYtLjM0IDAtLjAzNy0uMDEtLjE1OS0uMDE0LS4xOTItLjAyOC0uMDYtLjA3OC0uMDgzLS4xMjYtLjA3NlptOC4yMDMtMS4xNjJhLjI5NS4yOTUgMCAwIDAtLjMwNS4yNDRjMCAuMS4wNDguMTU2LjAzOC4yNDctLjAxNC4wNTMtLjA3LjA4Ni0uMjA0LjAyNS4wMi0uMDE4LS4wODctLjE2NC0uMDg3LS4xNjQtLjEwNS0uMDYtLjI0NC4wMDMtLjMzNS4wNmEuNDY5LjQ2OSAwIDAgMC0uMDMuMzg5Yy4xNS4yNjUuNjY1LjcxNy45MS43MjIuMDA2LS4yNC4wMy0uNTU3LjA0My0uNzU1LjAwNi0uMDc0LjAyNC0uMTU2LjA5OS0uMTc2LjA3NS0uMDE5LjIwNS4wNzIuMjA2LS4wMDUtLjAxNC0uMTUyLS4wNDUtLjM3Ny0uMTM1LS40ODJhLjI1NS4yNTUgMCAwIDAtLjItLjEwNVptLTguNjY4LTIuMjQ2Yy0uMDQyLjAwNS0uMDk0LjA1Ny0uMTY2LjE4MS0uMDUxLjEzLS4yNzMuMzI3LS4xMTMuNzM0LjEzLjI1Ny4xODUuNjc2LjEyNSAxLjE0MS0uMDkxLjEzMy0uMTExLjE3OC0uMjMuMzExLS4xNjcuMTcxLS4zNDguMTI4LS40ODcuMDY0LS4xMy0uMDgzLS4yMzItLjEyNi0uMjkxLS4zOTIuMDEtLjQyMy4wMzYtMS4xMTUtLjA0NC0xLjI2Mi0uMTItLjIyOC0uMzE2LS4xNDYtLjQtLjA3OC0uNDA0LjM1My0uNjAzLjk0OS0uNzI1IDEuNDIyLS4xMTIuMzQ1LS4yMzEuMjQ2LS4zMTUuMTA2LS4yMDQtLjE4Mi0uMjE4LTEuNjEtLjQ2NS0xLjM3Ni0uMzk1IDEuMDc3LjIyNiAyLjI1Ni42NTcgMi4xNDIuMzEuMTIzLjUwNy0uNDQxLjYzNC0xLjA2LjA4Ny0uMTcyLjE1My0uMTkyLjE5OC0uMTAzLS4wMTEuODIxLjA2MiAxLjAwNS4yODMgMS4yNTMuNDkzLjM2NC45LjA0Ni45MzMuMDE2bC4zODQtLjM2N2MuMDg1LS4wODYuMTk4LS4wOS4zMTktLjAxNS4xMTcuMTAyLjEwMi4yNzcuMzU0LjQuMjEuMDguNjYzLjAyLjc2OC0uMTU0LjE0LS4yMy4xNzUtLjMxLjI0LS4zOTguMS0uMTI4LjI3My0uMDcyLjI3My0uMDMtLjAxNi4wNzEtLjExNy4xNC0uMDQ4LjI2OS4xMi4wODYuMTQ3LjAzLjIxOC4wMTEuMjUtLjExMy40MzgtLjYzMy40MzgtLjYzMy4wMS0uMTkzLS4xMDQtLjE3OC0uMTc4LS4xMzgtLjA5Ni4wNTYtLjEwMi4wNzUtLjE5OC4xMy0uMTIyLjAxOC0uMzYuMDk1LS40NzctLjA3OS0uMTItLjIwOC0uMTIxLS40OTktLjIxMi0uNzA5IDAtLjAxNS0uMTYtLjMzLS4wMTItLjM1LjA3NS4wMTIuMjM1LjA1Mi4yNi0uMDc2LjA3OS0uMTI2LS4xNjgtLjQ4LS4zMzYtLjY1OC0uMTQ2LS4xNTMtLjM0OC0uMTcyLS41NDQtLjAxNi0uMTM3LjEyLS4xMTcuMjU1LS4xNDMuMzgyYS41NzguNTc4IDAgMCAwIC4xMjcuNTIxYy4xMzcuMjU3LjM4NS41ODcuMzAzIDEuMDU0IDAgMC0uMTQ0LjIyMi0uMzk4LjE5My0uMTA2LS4wMjItLjI3OC0uMDY2LS4zNy0uNzEyLS4wNy0uNDg4LjAxNy0xLjE3NC0uMi0xLjQ5NS0uMDUtLjEyMS0uMDkyLS4yMzktLjE2Mi0uMjNabS0zLjk1NiAyLjE5YS4yMjcuMjI3IDAgMCAwLS4xMjUuMDM2Yy0uMjM1LjEyLS4zMjYuNDgxLS4xOC42OTIuMTM3LjE4NS4zNTMuMTE3LjM4Mi4xMTcuMjMuMDI4LjM2OC0uNDEzLjM2OC0uNDEzcy4wMDctLjEyMy0uMjY3LjExYy0uMTE1LjAyMS0uMTMxLS4wMTktLjE2LS4wODFhLjUyNi41MjYgMCAwIDEgLjAzNi0uMzQ1Yy4wMjYtLjA2NyAwLS4xMTEtLjA1NC0uMTE3Wm04Ljk2Ny0uMDg1aC0uMDM2YS4xNDYuMTQ2IDAgMCAwLS4xMTEuMTFjLS4wMTEuMDQxLjAyLjEwNy0uMDE4LjEyNy0uMDIyLjAyMS0uMTEuMDA5LS4xMDUtLjEwNCAwLS4wMzYtLjAyOC0uMDc2LS4wNDQtLjA5OS0uMDE3LS4wMS0uMDI4LS4wMTMtLjA2LS4wMTMtLjAzNi4wMDEtLjAzNS4wMS0uMDU2LjA0LS4wMS4wMy0uMDIuMDYtLjAyLjA5NS0uMDA1LjA0LS4wMi4wNTMtLjA1MS4wNi0uMDM1IDAtLjAyOC4wMDQtLjA1Ny0uMDEzLS4wMTctLjAxNy0uMDM2LS4wMjQtLjAzNi0uMDU0cy0uMDA4LS4wOC0uMDE4LS4xYy0uMDE1LS4wMTgtLjAzOC0uMDI2LS4wNjUtLjAzMy0uMTQ1LjAwMS0uMTU0LjE1OC0uMTQ1LjIxOC0uMDExLjAxMi0uMDE4LjI5Ni4xOC4zNzQuMjY2LjEyMi43NjcuMDY4Ljc0Ni0uMzQxIDAtLjAzNy0uMDEtLjE1OC0uMDE0LS4xOTEtLjAyOC0uMDYyLS4wNzgtLjA4NS0uMTI2LS4wNzZabTYuNDk4LTEuMTJjLS4xMjQtLjAwMy0uMjYuMDg2LS4yMDYuMjYyLS4wMzEuMDk3LjI2NS40MjQuMzEzLjYwMi4wNDMuMTI3LS4wNjYuNTM3LjAyNC41NzQuMDgzLjA0My4xOTktLjI4My4yNDItLjU4NC4wMjQtLjE2NS0uMTA0LS43NDQtLjMyMS0uODQ3YS40ODMuNDgzIDAgMCAwLS4wNTItLjAwN1pNMTQuMTIgNi4yNzRhLjYxLjYxIDAgMCAwLS4yNDIuMDY0Yy0uMTc2LjE2MS0uMjE4LjQyLS4wOC41OC4xMzYuMDYxLjI3LjE5LjE4LjI2Mi0uMzgxLjM5LTEuMzc1IDEuMDQtMS40MjcgMS4xNjR2LjAwOGwuMDA0LjAwM2guMDAybC4wMDIuMDAyaC4wMDJsLjAwMi4wMDIuMDM2LjAxYy4xNDYuMDIyLjY0NS4wMTguNzA4LS4wMWguMDAydi0uMDAybC4wNDktLjAyNmMuMjg4LS4xODQgMS4xNzktMS4xNTcgMS4xNzktMS4xNTdsLS4xNTQtLjExNy0uMDI3LS4wMjhjLS4wMjUtLjAzOC0uMDE0LS4wNzQuMDI3LS4xMTEuMjUtLjE0LjE3Mi0uNDQ3LjA0LS41ODZhLjY4OC42ODggMCAwIDAtLjMwMy0uMDU4Wm04LjIyOS4wNjVjLS4xMzYtLjAwMy0uMjg3LjA3OS0uMjI4LjI0MS0uMDM0LjA5LjI5My4zOS4zNDYuNTU2LjA5NS4yNTMtLjA3Mi40OTUuMDI2LjUzLjA5LjA0LjIxNy0uMjYxLjI2NS0uNTQuMDU1LS4yMjQtLjExMy0uNjg2LS4zNTItLjc4YS4yODYuMjg2IDAgMCAwLS4wNTctLjAwN1pNNy43MzYgNi4yMDJjLS4xMTctLjAwMy0uMjQ2LjA2Ni0uMTk2LjItLjAzLjA3NC4yMjkuMzIyLjI3NS40NTguMDQuMDk2LS4wNC40MDkuMDQ0LjQzOC4wNzguMDMyLjE4NS0uMjE3LjIyNi0uNDQ2LjAyMy0uMTI2LjAwNi0uNTU2LS4zMDEtLjY0NGEuNDEuNDEgMCAwIDAtLjA0OC0uMDA2Wm05LjQ4Ni0uMTM5Yy0uMDY2LjAwNi0uMTQuMDc5LS4xOTguMjItLjA1MS4xMDctLjExMy42Ny0uMTAzLjY3LS4wNDEuMTY3LjE4My4yMzcuMjg1LjAyMi4xNTMtLjM5NC4xNTMtLjU2Mi4xNjQtLjczLS4wMjUtLjEyNi0uMDgzLS4xODgtLjE0OC0uMTgyWk0xNS43MTYgNmEuMjU1LjI1NSAwIDAgMC0uMTE1LjA0MmMtLjExOC4wNzYtLjM1Mi4zMDktLjM2LjU3Ny0uMDA3LjE1LS4wMzcuMTUuMDY3LjI0Ni4wNzUuMTA0LjE1LjA5My4zLjAxOGEuMzA1LjMwNSAwIDAgMCAuMTQ2LS4yMDNjLjAzNi0uMTcyLS4xOS4wODEtLjIxOC0uMTEtLjA1LS4xNzguMDk0LS4yNS4yMy0uNDIzLjAwNC0uMDguMDA2LS4xNDYtLjA1LS4xNDdabS01LjEyOC4yN2gtLjAzNWEuMTQzLjE0MyAwIDAgMC0uMTExLjEwOGMtLjAxMS4wNC4wMTkuMTA5LS4wMi4xMjktLjAyMi4wMi0uMTA3LjAwNy0uMTAzLS4xMDYgMC0uMDM3LS4wMjgtLjA3NC0uMDQ0LS4wOTctLjAxNy0uMDEtLjAyOC0uMDEzLS4wNi0uMDEzLS4wMzYgMC0uMDM1LjAxLS4wNTYuMDQtLjAxLjAzLS4wMjEuMDYtLjAyMS4wOTUtLjAwNS4wNC0uMDIyLjA1My0uMDUzLjA2LS4wMzUgMC0uMDI2LjAwNC0uMDU1LS4wMTQtLjAxNy0uMDE3LS4wMzYtLjAyNC0uMDM2LS4wNTMgMC0uMDMtLjAwOC0uMDgtLjAxOC0uMWEuMTE3LjExNyAwIDAgMC0uMDY1LS4wMzVjLS4xNDUuMDAxLS4xNTYuMTYtLjE0Ny4yMi0uMDExLjAxMS0uMDE2LjI5NC4xODIuMzcyLjI2Ni4xMjEuNzY1LjA3Ljc0NC0uMzRhMi44OSAyLjg5IDAgMCAwLS4wMTItLjE5Yy0uMDI4LS4wNjEtLjA3OC0uMDg0LS4xMjUtLjA3NloiIGZpbGw9IiMzMzY5MUUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==" alt="Saudi Arabia" class="nav-img">
+                <p class="nav-text">
+                    Saudi Arabia SR
+                </p>
+            </div>
+
+            <div class="nav-buttons nav-spl flex">
+                <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMgMEMxLjM0OCAwIDAgMS4zNDggMCAzdjI2YzAgMS42NTIgMS4zNDggMyAzIDNoMTEuNTk0bDIuNDY5LTIuNDY5IDEuNDA2IDEuNDA3TDE2IDMzLjQwNlY0NWMwIDEuNjUyIDEuMzQ4IDMgMyAzaDI2YzEuNjUyIDAgMy0xLjM0OCAzLTNWMTljMC0xLjY1Mi0xLjM0OC0zLTMtM0gzMy40MDZMMzEgMTguNDA2IDI5LjU5NCAxNyAzMiAxNC41OTRWM2MwLTEuNjUyLTEuMzQ4LTMtMy0zSDN6bTM5LjI4MS4yODFMMzYuNTk0IDZsNS42ODcgNS43MTkgMS40MzgtMS40MzhMMzkuNDA2IDZsNC4zMTMtNC4yODFMNDIuMjguMjh6TTI4LjE4OCAxOC40MDZsMS40MDYgMS40MDctMS4zNzUgMS40MDYtMS40MzgtMS40MzggMS40MDctMS4zNzV6bS0yLjc4MiAyLjc4MiAxLjQwNyAxLjQwNkwyNS40MDUgMjQgMjQgMjIuNTk0bDEuNDA2LTEuNDA3ek04LjM3NCAxMC45MjVjMC0xLjU4LjU0OC0yLjg1MiAxLjYzOC0zLjc4NC44NTYtLjc0NCAxLjg4Mi0xLjEyNiAzLjA2OC0xLjE0MiAxLjYwNyAwIDIuODkzLjY0NyAzLjgyNSAxLjkyNmwuMDY3LjIwNnYyLjU1bC0uNjM1LS44OTZjLS44MzItMS4xNzEtMS44NjQtMS43NDQtMy4xMjUtMS43NDQtLjgxNCAwLTEuNDUzLjI2NS0xLjk0Mi44LS40OTUuNTQtLjc0NCAxLjI0NC0uNzQ0IDIuMTI4IDAgMS4wNC4zMDQgMS44NTMuOTEyIDIuNDYxLjU3Ny41OSAxLjM1Ljg4NSAyLjM0Ni44ODVoNC4yNDR2Mi4wNjRoLTQuMmMtMS4zMzMgMC0yLjMxOC4zNTUtMi45OCAxLjA1Ny0uNDk1LjUyLS43NCAxLjE2LS43NCAxLjkzNyAwIC45NTUuMzQ1IDEuNzI0IDEuMDQ0IDIuMzMuNjY2LjU3MyAxLjU0Ni44NjIgMi42NTQuODYyaC4wNDRjMS42MDIgMCAyLjg3MS0uMzU0IDMuODE4LTEuMDUzbC41NTgtLjQxM3YyLjIyOGwtLjE2My4xMDRjLTEuMjYuNzk4LTIuNjgxIDEuMTk4LTQuMjU3IDEuMTk4LTEuODUzIDAtMy4zNC0uNTg3LTQuNDM2LTEuNzZBNC45MjQgNC45MjQgMCAwIDEgOCAxOS4zOTVjMC0uOTc1LjI1My0xLjg2Mi43Ni0yLjY1M2E0LjY4MSA0LjY4MSAwIDAgMSAxLjUyLTEuNDkyYy0xLjI3LS45NDQtMS45MDYtMi4zOTctMS45MDYtNC4zMjV6bTIyLjQzOCAxMi45OGgyLjM3NUwzOS45MDcgNDFoLTIuNUwzNS41IDM1LjgxMmgtNy4xODhMMjYuNDA3IDQxaC0yLjMxMmw2LjcxOC0xNy4wOTR6TTIyLjU5NSAyNCAyNCAyNS40MDZsLTEuMzc1IDEuNDA3LTEuNDM4LTEuNDM4TDIyLjU5NSAyNHptOS4zMTIgMS45MDYtMi45MDYgOGg1LjgxM2wtMi45MDctOHptLTEyLjA5My44NzUgMS40MDYgMS40MDctMS40MDcgMS40MDYtMS40MDYtMS40MDcgMS40MDctMS40MDZ6bS0xNS4wOTQgOS41TDMuMjggMzcuNzIgNy41OTQgNDIgMy4yOCA0Ni4yODFsMS40NCAxLjQzOUwxMC40MDYgNDIgNC43MiAzNi4yODF6Ii8+PC9zdmc+" alt="language" class="nav-img">
+                <p class="nav-text">
+                    urdutext
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="flex">
+        <div id="logo">
+            <img src="https://www.jarir.com/assets/images/logo/jarir.svg" alt="logo" id="jarir-logo">
+        </div>
+
+        <div class="header-buttons">
+            <input type="button" value="Choose your delivery preference" id="delivery" class="header-but">
+        </div>
+        <div class="header-buttons">
+            <input type="text" id="search-header" placeholder="Search..." class="header-but">
+        </div>
+        <div class="header-buttons">
+            <button id="browse" class="header-but">Browse Categories</button>
+        </div>
+        <div class="header-buttons">
+            <button id="brand" class="header-but"><h3>Brands</h3></button>
+        </div>
+        <div class="header-buttons">
+            <button id="cart" class="header-but"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuOTMyIDBBMS45NTcgMS45NTcgMCAwIDAgMCAxLjk3YzAgMS4wODIuODcyIDEuOTY4IDEuOTM1IDEuOTY4YTEuOTUgMS45NSAwIDAgMCAxLjYzMy0uOTI0IDEuOTcgMS45NyAwIDAgMCAuMTA1LTEuODgyQTQuMzk4IDQuMzk4IDAgMCAxIDYuODQgNC42NDVsMy42MjIgMjAuOTc3YTIuOTE3IDIuOTE3IDAgMCAwIDIuNjEzIDIuNDE3IDIuNDYyIDIuNDYyIDAgMCAwLS4yNzUgMi41NzRBMi40MzggMi40MzggMCAwIDAgMTQuOTc1IDMyYTIuNDM4IDIuNDM4IDAgMCAwIDIuMTcxLTEuMzc0IDIuNDYyIDIuNDYyIDAgMCAwLS4yNTMtMi41NjdIMjMuMmEyLjQ3IDIuNDcgMCAwIDAtLjI0MyAyLjU2IDIuNDQ2IDIuNDQ2IDAgMCAwIDIuMTYgMS4zNzkgMi40MzggMi40MzggMCAwIDAgMi4xNy0xLjM3NCAyLjQ2MiAyLjQ2MiAwIDAgMC0uMjUyLTIuNTY1aDIuNDN2LS45ODJIMTMuMzE2YTEuOTM4IDEuOTM4IDAgMCAxLTEuOTA1LTEuNjNsLS42NTQtMy43ODVoMTUuNDU4YzEuNTYgMCAyLjkyNC0xLjA5NiAzLjI4OS0yLjY0MkwzMiA4LjQxOCA4LjEyOCA2LjQzIDcuNzkgNC40NzhBNS4zNDcgNS4zNDcgMCAwIDAgMi41NTcgMGgtLjYyNXptMTAuMDY1IDExLjQyOWgxNC44NjVhLjU3LjU3IDAgMCAxIC41NjguNTcxLjU3LjU3IDAgMCAxLS41NjguNTcxSDExLjk5N0EuNTcuNTcgMCAwIDEgMTEuNDMgMTJhLjU3LjU3IDAgMCAxIC41NjgtLjU3MXptLTExLjU3IDBoNi4wMDZjLjIzNiAwIC40MjYuMjU2LjQyNi41NzEgMCAuMzE1LS4xOS41NzEtLjQyNi41NzFILjQyNkMuMTkxIDEyLjU3MSAwIDEyLjMxNSAwIDEyYzAtLjMxNS4xOS0uNTcxLjQyNi0uNTcxaC4wMDJ6TTE0LjI4MyAxNmgxMC4yOTNhLjU3NC41NzQgMCAwIDEgLjQ5Mi44NTcuNTY4LjU2OCAwIDAgMS0uNDkyLjI4NUgxNC4yODJhLjU2OC41NjggMCAwIDEtLjQ5Mi0uMjg1LjU3NC41NzQgMCAwIDEgMC0uNTcxLjU2OC41NjggMCAwIDEgLjQ5Mi0uMjg2ek0yLjg1OCAxNmgzLjQyOGEuNTcuNTcgMCAwIDEgLjU2OS41NzEuNTcuNTcgMCAwIDEtLjU2OS41NzFIMi44NThhLjU2OC41NjggMCAwIDEtLjQ5Mi0uMjg1LjU3NC41NzQgMCAwIDEgMC0uNTcxLjU2OC41NjggMCAwIDEgLjQ5Mi0uMjg2eiIvPjwvc3ZnPg==" alt="" width="25px"></button>
+        </div>
+    </header>
+
+    <!-- <div id="titatnium">
+        <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=1200,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/MB-ksa-220923-iphone15-pro-launch-en.jpg" alt="">
+    </div> -->
+
+    <div id="main">
+        <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=1200,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/MB-ksa-220923-iphone15-pro-launch-en.jpg" id="titanium" alt="">
+        <h3>Shop by Category</h3>
+
+        <div class="small-10 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/1-JarirTicketEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/2-OfficeSuppliesEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/3-SchoolSuppliesEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/4-KidsDevelopmentEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/5-ArtsCraftsEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/6-ArabicBooksEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/7-EnglishBooksEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/07/8-LaptopsTabletsEN-a2.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/08/8.1-PrintersScannersEN.png" alt="" class="small-10-img">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=101,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2022/08/8.2-MonitorsProjectorsEN.png" alt="" class="small-10-img">
+        </div>
+
+        <div class="button-4 flex">
+            <button class="but-4 flex-spl">
+                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=154,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/06/Weekly.png" alt="" class="but-4-img"> 
+                <h3>Weekly Deals</h3>
+            </button>
+            <button class="but-4 flex-spl">
+                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=154,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/06/Weekly.png" alt="" class="but-4-img"> 
+                <h3>Weekly Deals</h3>
+            </button>
+            <button class="but-4 flex-spl">
+                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=154,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/06/Weekly.png" alt="" class="but-4-img"> 
+                <h3>Weekly Deals</h3>
+            </button>
+            <button class="but-4 flex-spl">
+                <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=154,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/06/Weekly.png" alt="" class="but-4-img"> 
+                <h3>Weekly Deals</h3>
+            </button>
+        </div>
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-220923-iphone15-pro-launch-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-220923-iphone15-launch-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-220923-watch-ultra2-launch-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-220923-watch-s9-launch-en.jpg" alt="" class="img-4">
+        </div>
+
+        <!-- <div class="images-4 flex">
+            <img src="" alt="" class="img-4">
+            <img src="" alt="" class="img-4">
+            <img src="" alt="" class="img-4">
+            <img src="" alt="" class="img-4">
+        </div> -->
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-250923-ndo-huawei-laptops-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-250923-huawei-tradein-offer-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-250923-ndo-yeelight-smart-cube-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/FP-ksa-250923-redmi-pad-se-new-en-en.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-2 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/1-ndo-smartphone-sub-banner-en.jpg" alt="" class="img-2">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/2-ndo-it-flyer-sub-banner-en.jpg" alt="" class="img-2">
+        </div>
+
+        <!-- <div class="images-2 flex">
+            <img src="" alt="" class="img-2">
+            <img src="" alt="" class="img-2">
+        </div> -->
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/3-ndo-galaxy-zflip5-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/4-ndo-nothing-phone1-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/5-ndo-huawei-nova11-pro-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/6-ndo-honor-70-sub-banner-en1.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/7-ndo-matebook-d15-sub-banner-en1.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/8-ndo-asus-vivobook-s14-sub-banner-en1.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/9-ndo-samsung-smart-tv-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/10-ndo-sony-smart-tv-sub-banner-en1.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-2 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/11-ndo-laptops-sub-banner-en1.jpg" alt="" class="img-2">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/12-ndo-smart-tv-sub-banner-en.jpg" alt="" class="img-2">
+        </div>
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/13-ndo-tablets-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/14-ndo-smarthome-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/15-ndo-printers-projectors-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/16-ndo-routers-sub-banner-en.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-2 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/17-ndo-gaming-acc-sub-banner-en.jpg" alt="" class="img-2">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/18-ndo-smart-watches-sub-banner-en.jpg" alt="" class="img-2">
+        </div>
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/19-ndo-hyper-x-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/20-ndo-belkin-charger-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/21-ndo-logitech-k380-sub-banner-en1.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/22-ndo-samsung-monitor-sub-banner-en.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-4 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/23-ndo-lenovo-tab-m8-sub-banner-en1.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/24-ndo-apple-watch-s8-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/25-ndo-canon-bundle-sub-banner-en.jpg" alt="" class="img-4">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=287,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/26-ndo-benq-gv30-sub-banner-en.jpg" alt="" class="img-4">
+        </div>
+
+        <div class="images-2 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/27-ndo-smartphone-acc-sub-banner-en.jpg" alt="" class="img-2">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/09/28-ndo-computer-acc-sub-banner-en.jpg" alt="" class="img-2">
+        </div>
+
+        <div class="images-3 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=390,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/07/EV-ksa-installment-service-en.jpg" alt="" class="img-3">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=390,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/05/EV-ksa-020523-discount-card-en.jpg" alt="" class="img-3">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=390,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/05/EV-ksa-080523-jarir-tradein-en.jpg" alt="" class="img-3">
+        </div>
+
+        <div class="images-2 flex">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/03/CollectionBannerHPENLGa1.png" alt="" class="img-2">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=598,height=auto,quality=85,metadata=none/https://wps-media.jarir.com/wp-content/uploads/2023/03/DeliveryBannerHPENLGa1.png" alt="" class="img-2">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
     
     <footer>
         <div id="top-button">
