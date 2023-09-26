@@ -8,7 +8,7 @@
 body{
     font-family: 'Tajawal', sans-serif;
     /* padding: 0px 160px; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .flex{
@@ -57,9 +57,9 @@ header{
     padding: 4px 16px;
 }
 
-h3{
+/* h3{
     color: #3c4858;
-}
+} */
 
 #delivery{
     border: none;
@@ -189,9 +189,9 @@ footer{
     background-color: white;
     border: none;
     margin: auto;
-    /* position: absolute;
-    left: 675px;
-    top: 5px; */
+    position: relative;
+    left: 705px;
+    top: 15px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
